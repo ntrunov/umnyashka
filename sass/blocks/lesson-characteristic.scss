@@ -1,0 +1,301 @@
+.lesson-characteristic {
+  color: #ffffff;
+
+  background-color: $purple;
+  background: linear-gradient(-135deg, darken($purple, 5%), $purple);
+
+  &--green-accent {
+    background-color: $accent-green;
+    background: linear-gradient(-135deg, darken($accent-green, 5%), $accent-green)
+  }
+
+  &--blue {
+    background-color: $blue;
+    background: linear-gradient(-135deg, darken($blue, 5%), $blue)
+  }
+
+  &--yellow {
+    background-color: $accent-yellow;
+    background: linear-gradient(-135deg, darken($accent-yellow, 5%), $accent-yellow)
+  }
+
+  &--red {
+    background-color: $accent-red;
+    background: linear-gradient(-135deg, darken($accent-red, 5%), $accent-red)
+  }
+
+  &--green {
+    background-color: $green;
+    background: linear-gradient(-135deg, darken($green, 5%), $green)
+  }
+}
+
+.lesson-characteristic__wrapper {
+  @include mobile-wrapper;
+  padding-bottom: 95px;
+}
+
+.lesson-characteristic__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.lesson-characteristic__item {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  color: $purple;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 3px 17px 0 rgba(50, 50, 50, 0.4);
+  background-repeat: no-repeat;
+  background-position: 210px center;
+  background-size: 90px;
+  background-image: url("../img/ruble-purple.svg");
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--boy {
+    background-image: url("../img/boy-purple.svg");
+  }
+
+  &--clock {
+    background-image: url("../img/clock-purple.svg");
+  }
+
+  &--teacher {
+    background-image: url("../img/woman-purple.svg");
+  }
+
+  &--calendar {
+    background-image: url("../img/calendar-purple.svg");
+  }
+}
+
+.lesson-characteristic--green-accent .lesson-characteristic__item {
+  color: $accent-green;
+
+  background-image: url("../img/ruble-agreen.svg");
+
+  &--boy {
+    background-image: url("../img/boy-agreen.svg");
+  }
+
+  &--clock {
+    background-image: url("../img/clock-agreen.svg");
+  }
+
+  &--teacher {
+    background-image: url("../img/woman-agreen.svg");
+  }
+
+  &--calendar {
+    background-image: url("../img/calendar-agreen.svg");
+  }
+}
+
+.lesson-characteristic--blue .lesson-characteristic__item {
+  color: $blue;
+
+  background-image: url("../img/ruble-blue.svg");
+
+  &--boy {
+    background-image: url("../img/boy-blue.svg");
+  }
+
+  &--clock {
+    background-image: url("../img/clock-blue.svg");
+  }
+
+  &--teacher {
+    background-image: url("../img/woman-blue.svg");
+  }
+
+  &--calendar {
+    background-image: url("../img/calendar-blue.svg");
+  }
+}
+
+.lesson-characteristic--yellow .lesson-characteristic__item {
+  color: $accent-yellow;
+
+  background-image: url("../img/ruble-yellow.svg");
+
+  &--boy {
+    background-image: url("../img/boy-yellow.svg");
+  }
+
+  &--clock {
+    background-image: url("../img/clock-yellow.svg");
+  }
+
+  &--teacher {
+    background-image: url("../img/woman-yellow.svg");
+  }
+
+  &--calendar {
+    background-image: url("../img/calendar-yellow.svg");
+  }
+}
+
+.lesson-characteristic--red .lesson-characteristic__item {
+  color: $accent-red;
+
+  background-image: url("../img/ruble-red.svg");
+
+  &--boy {
+    background-image: url("../img/boy-red.svg");
+  }
+
+  &--clock {
+    background-image: url("../img/clock-red.svg");
+  }
+
+  &--teacher {
+    background-image: url("../img/woman-red.svg");
+  }
+
+  &--calendar {
+    background-image: url("../img/calendar-red.svg");
+  }
+}
+
+.lesson-characteristic--green .lesson-characteristic__item {
+  color: $green;
+
+  background-image: url("../img/ruble-green.svg");
+
+  &--boy {
+    background-image: url("../img/boy-green.svg");
+  }
+
+  &--clock {
+    background-image: url("../img/clock-green.svg");
+  }
+
+  &--teacher {
+    background-image: url("../img/woman-green.svg");
+  }
+
+  &--calendar {
+    background-image: url("../img/calendar-green.svg");
+  }
+}
+
+
+.lesson-characteristic__title {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.lesson-characteristic__description {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.lesson-characteristic__teacher {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.lesson-characteristic__schedule {
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+
+  list-style: none;
+}
+
+.lesson-characteristic__schedule-item {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 12px;
+  }
+}
+
+.lesson-characteristic__teacher-name {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .lesson-characteristic__wrapper {
+    @include tablet-wrapper;
+    padding-bottom: 120px;
+  }
+
+  .lesson-characteristic__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .lesson-characteristic__description {
+    width: 252px;
+  }
+
+  .lesson-characteristic__schedule {
+    width: 598px;
+  }
+
+  .lesson-characteristic__description {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .lesson-characteristic__teacher {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .lesson-characteristic__item {
+    background-position: 250px center;
+  }
+
+  .lesson-characteristic__item--calendar {
+    background-position: 600px center;
+  }
+
+  .lesson-characteristic__schedule {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .lesson-characteristic__wrapper {
+    @include desktop-wrapper;
+  }
+
+  .lesson-characteristic__description {
+    width: 195px;
+  }
+
+  .lesson-characteristic__schedule {
+    width: 1065px;
+  }
+
+  .lesson-characteristic__item {
+    background-position: 195px center;
+  }
+
+  .lesson-characteristic__item--calendar {
+    background-position: 1060px center;
+  }
+}

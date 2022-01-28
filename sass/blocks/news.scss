@@ -1,0 +1,23 @@
+.news__wrapper {
+  @include mobile-wrapper;
+}
+
+.news__heading {
+  line-height: 1.1
+}
+
+.news__date {
+  color: #727272;
+}
+
+@media (min-width: $tablet-width) {
+  .news__wrapper {
+    @include tablet-wrapper;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news__wrapper {
+    @include desktop-wrapper;
+  }
+}

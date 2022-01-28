@@ -1,0 +1,106 @@
+.social {
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.social__link {
+  position: relative;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  font-size: 0px;
+
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: $accent-green;
+
+  transition: all 0.2s linear;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+  }
+
+  &--vk::before {
+    top: 8px;
+    left: 8px;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../../img/vk.svg");
+  }
+
+  &--inst::before {
+    z-index: 2;
+    top: 8px;
+    left: 8px;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../../img/inst.svg");
+  }
+
+  &--vk:hover,
+  &--vk:focus {
+    background-color: #5181b8;
+  }
+
+  &--vk:focus {
+    outline: none;
+  }
+
+  &--inst::after {
+    content: "";
+
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: #CF286A;
+    background: linear-gradient(45deg, #fecf6e 0%, #fa882b 20%, #ee4c38 40%, #cf286a 60%, #b02688 80%, #8d39c3 100%);
+    opacity: 0;
+
+    transition: all 0.2s linear;
+  }
+
+  &--inst:hover::after,
+  &--inst:focus::after {
+    opacity: 1;
+  }
+
+  &--inst:focus {
+    outline: none;
+  }
+
+  &--blue {
+    background-color: $accent-blue;
+  }
+
+  &--green {
+    background-color: $accent-green;
+  }
+
+  &--yellow{
+    background-color: $accent-yellow;
+  }
+
+  &--red {
+    background-color: $accent-red;
+  }
+}

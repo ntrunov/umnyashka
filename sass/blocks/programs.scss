@@ -1,0 +1,250 @@
+.programs__wrapper {
+  @include mobile-wrapper;
+}
+
+.programs__ages-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.programs__ages-item {
+  position: relative;
+
+  width: 220px;
+
+  min-height: 200px;
+
+  margin-bottom: 15px;
+  padding-top: 35px;
+
+  padding-bottom: 80px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  border-radius: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    right: 0;
+  }
+
+  &--img-pacifier::before {
+    top: 77.5px;
+
+    width: 83px;
+    height: 156px;
+
+    background-image: url("../../img/pacifier.png");
+  }
+
+  &--img-rings::before {
+    top: 77.5px;
+
+    width: 101px;
+    height: 154px;
+
+    background-image: url("../../img/rings.png");
+  }
+
+  &--img-rattle::before {
+    top: 69.5px;
+
+    width: 89px;
+    height: 173px;
+
+    background-image: url("../../img/rattle.png");
+  }
+
+  &--img-duck::before {
+    top: 84.5px;
+
+    width: 125px;
+    height: 139px;
+
+    background-image: url("../../img/duck.png");
+  }
+
+  &--img-cubes::before {
+    top: 79.5px;
+
+    width: 119px;
+    height: 151px;
+
+    background-image: url("../../img/cubes.png");
+  }
+
+  &--img-bear::before {
+    top: 69.5px;
+
+    width: 111px;
+    height: 173px;
+
+    background-image: url("../../img/bear.png");
+  }
+
+  &--img-book::before {
+    top: 95.5px;
+
+    width: 115px;
+    height: 123px;
+
+    background-image: url("../../img/book.png");
+  }
+
+  &--bg-blue {
+    background-color: #55c4ff;
+
+    & .programs__button:hover,
+    & .programs__button:focus {
+      color: #55c4ff;
+    }
+  }
+
+  &--bg-green {
+    background-color: $accent-green;
+
+    & .programs__button:hover,
+    & .programs__button:focus {
+      color: $accent-green;
+    }
+  }
+
+  &--bg-yellow {
+    background-color: $accent-yellow;
+
+    & .programs__button:hover,
+    & .programs__button:focus {
+      color: $accent-yellow;
+    }
+  }
+
+  &--bg-darkblue {
+    background-color: $accent-blue;
+
+    & .programs__button:hover,
+    & .programs__button:focus {
+      color: $accent-blue;
+    }
+  }
+
+  &--bg-darkgreen {
+    background-color: #3bba57;
+
+    & .programs__button:hover,
+    & .programs__button:focus {
+      color: #3bba57;
+    }
+  }
+
+  &--bg-red {
+    background-color: $accent-red;
+
+    & .programs__button:hover,
+    & .programs__button:focus {
+      color: $accent-red;
+    }
+  }
+
+  &--bg-purple {
+    background-color: #9249ff;
+
+    & .programs__button:hover,
+    & .programs__button:focus {
+      color: #9249ff;
+    }
+  }
+}
+
+.programs__ages-item:last-child {
+  margin-bottom: 0;
+}
+
+.programs__age {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+
+  font-size: 25px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.programs__lessons-list {
+  position: relative;
+  z-index: 1;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.programs__lessons-item {
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.programs__lessons-item a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.programs__button {
+  position: absolute;
+  bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .programs__wrapper {
+    @include tablet-wrapper;
+  }
+
+  .programs__ages-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .programs__ages-item {
+    width: 262px;
+    margin-right: 24px;
+    margin-bottom: 20px;
+  }
+
+  .programs__ages-item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs__wrapper {
+    @include desktop-wrapper;
+  }
+
+  .programs__ages-item {
+    width: 205px;
+    margin-right: 25px;
+  }
+
+  .programs__ages-item:nth-child(2n) {
+    margin-right: 25px;
+  }
+
+  .programs__ages-item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .programs__ages-item:nth-child(n+5) {
+    margin-bottom: 0;
+  }
+}

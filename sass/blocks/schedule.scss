@@ -1,0 +1,225 @@
+.schedule__alert {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: $accent-green-dark;
+  border-radius: 5px;
+
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.schedule {
+  color: #ffffff;
+
+  background-color: $accent-green;
+}
+
+.schedule__wrapper {
+  @include mobile-wrapper;
+}
+.schedule__ages-filter {
+  margin-bottom: 25px;
+}
+
+.schedule__lessons-filter {
+  margin-bottom: 35px;
+}
+
+.schedule__checkbox-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.schedule__filter-title {
+  margin: 0;
+  margin-bottom: 5px;
+
+  color: #3a3a3a;
+  font-weight: 400;
+}
+
+.schedule__checkbox-item {
+  margin-bottom: 8px;
+
+  font-weight: 400;
+}
+
+.schedule__checkbox-input {
+  display: none;
+}
+
+.schedule__checkbox-label {
+  font-size: 0;
+}
+
+.schedule__checkbox-custom,
+.schedule__checkbox-title {
+  display: inline-block;
+
+  font-size: 16px;
+
+  vertical-align: middle;
+}
+
+.schedule__checkbox-title {
+  width: 250px;
+}
+
+.schedule__checkbox-custom {
+  position: relative;
+
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.schedule__checkbox-input:checked + .schedule__checkbox-custom::before {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../../img/tmp-checked.svg");
+}
+
+.schedule__timetable {
+  text-align: center;
+}
+
+.schedule__timetable-column {
+  margin-bottom: 20px;
+}
+
+.schedule__cell-header {
+  margin-bottom: 5px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #000000;
+
+  background-color: $accent-yellow;
+}
+
+.schedule__cell {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  min-height: 116px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 5px;
+
+  line-height: 18px;
+
+  background-color: $accent-green-dark;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.schedule__lesson {
+  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 13px;
+
+  font-weight: 400;
+}
+
+.schedule__time {
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.schedule__lesson,
+.schedule__time {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .schedule__wrapper {
+    @include tablet-wrapper;
+  }
+
+  .schedule__filters-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .schedule__ages-filter {
+    width: 100px;
+    order: 2;
+  }
+
+  .schedule__lessons-filter {
+    width: 310px;
+    margin-right: 50px;
+  }
+
+  .schedule__cell {
+    min-height: 80px;
+  }
+
+  .schedule__age-br {
+    display: none;
+  }
+
+  .schedule__checkbox-title {
+    width: auto;
+  }
+}
+
+.schedule__more {
+  margin-top: 50px;
+
+  text-align: center;
+}
+
+@media (min-width: $desktop-width) {
+  .schedule__wrapper {
+    @include desktop-wrapper;
+  }
+
+  .schedule__timetable {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .schedule__timetable-column {
+    width: 185px;
+    margin-bottom: 0;
+  }
+
+  .schedule__cell {
+    min-height: 185px;
+
+    &--hide {
+      display: block;
+    }
+  }
+
+  .schedule__age-br {
+    display: block;
+  }
+
+}

@@ -1,0 +1,96 @@
+.lesson-header {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/circles-purple.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 450px;
+    z-index: -1;
+  }
+
+  &--blue::before {
+    background-image: url("../img/circles-blue.svg");
+  }
+
+  &--accent-green::before {
+    background-image: url("../img/circles-green-accent.svg");
+  }
+
+  &--yellow::before {
+    background-image: url("../img/circles-yellow.svg");
+  }
+
+  &--red::before {
+    background-image: url("../img/circles-red.svg");
+  }
+
+  &--green::before {
+    background-image: url("../img/circles-green.svg");
+  }
+}
+
+
+
+.lesson-header__wrapper {
+  @include mobile-wrapper;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.lesson-header__heading {
+  position: relative;
+  z-index: -1;
+  margin: 0;
+  padding: 15px;
+
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 900;
+
+
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 17px 0 rgba(50, 50, 50, 0.1);
+}
+
+@media (min-width: $tablet-width) {
+  .lesson-header {
+    &::before {
+      background-size: 610px;
+    }
+  }
+
+  .lesson-header__wrapper {
+    @include tablet-wrapper;
+    padding-top: 350px;
+    padding-bottom: 350px;
+  }
+
+  .lesson-header__heading {
+    font-size: 60px;
+    line-height: 64px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .lesson-header__wrapper {
+    @include desktop-wrapper;
+    padding-top: 400px;
+    padding-bottom: 400px;
+  }
+
+  .lesson-header__heading {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}

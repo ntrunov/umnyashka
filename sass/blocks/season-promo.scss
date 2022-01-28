@@ -1,0 +1,90 @@
+.season-promo__wrapper {
+  @include mobile-wrapper;
+}
+
+.season-promo {
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+  text-align: center;
+
+  background-color: #000000;
+  background-image: url("../../img/season-promo-1.jpg");
+  background-position: center;
+}
+
+.season-promo__intro {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 900;
+}
+
+.season-promo__slogan {
+    display: block;
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.season-promo__telephone {
+  margin: 0;
+
+  font-size: 31px;
+  line-height: 37px;
+  font-weight: 900;
+
+  & a {
+    color: $accent-green;
+
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .season-promo__wrapper {
+    @include tablet-wrapper;
+    text-align: left;
+  }
+
+  .season-promo__intro {
+    margin-bottom: 35px;
+
+    font-size: 60px;
+    line-height: 64px;
+  }
+
+  .season-promo__slogan {
+    margin-bottom: 55px;
+
+    font-size: 34px;
+    line-height: 41px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .season-promo__wrapper {
+    @include desktop-wrapper;
+  }
+
+  .season-promo__slogan {
+    display: block;
+  }
+
+  .season-promo__intro,
+  .season-promo__slogan {
+    margin-right: 428px;
+  }
+}
+
+@media (min-width: 1980px) {
+  .season-promo {
+    background-size: cover;
+  }
+}

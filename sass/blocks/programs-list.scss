@@ -1,0 +1,123 @@
+.programs-list {
+  @include mobile-wrapper;
+  padding-top: 60px;
+}
+
+.programs-list__age {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.programs-list__ages-list,
+.programs-list__programs {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.programs-list__ages-item {
+  position: relative;
+
+  margin-bottom: 45px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #f2f2f2;
+  }
+
+  &:last-child::after {
+    height: 0;
+  }
+}
+
+.programs-list__programs-item a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: $accent-green;
+  border-radius: 5px;
+}
+
+.programs-list__programs-item {
+  margin-bottom: 10px;
+
+  &--music a{
+    background-color: $accent-green;
+  }
+
+  &--development a{
+    background-color: $accent-yellow;
+  }
+
+  &--painting a,
+  &--creation a{
+    background-color: $blue;
+  }
+
+  &--arithmetic a{
+    background-color: $purple;
+  }
+
+  &--reading a{
+    background-color: $green;
+  }
+
+  &--school a {
+    background-color: $accent-red;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs-list {
+    @include tablet-wrapper;
+    padding-top: 60px;
+  }
+
+  .programs-list__programs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .programs-list__programs-item {
+    width: 322px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .programs-list {
+    @include desktop-wrapper;
+    padding-top: 80px;
+  }
+
+  .programs-list__programs {
+    justify-content: flex-start;
+  }
+
+  .programs-list__programs-item {
+    width: 265px;
+    margin-right: 25px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}

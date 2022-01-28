@@ -1,0 +1,89 @@
+.modal {
+  position: absolute;
+  z-index: 100;
+  top: 135px;
+  left: 50%;
+
+  display: none;
+  width: 240px;
+  margin-left: -140px;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border-top: 50px solid $accent-green;
+  background-color: #ffffff;
+  border-radius: 5px;
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: -50px;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 0;
+
+  background: none;
+  border: 0;
+  border-top-right-radius: 5px;
+
+  &:active,
+  &:focus {
+    background-color: $accent-green-darker;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 32px;
+    height: 2px;
+    margin-top: -1px;
+    margin-left: -16px;
+
+    border-radius: 2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 400px;
+    margin-left: -240px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    width: 500px;
+    margin-left: -290px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

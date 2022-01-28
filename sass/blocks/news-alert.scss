@@ -1,0 +1,32 @@
+.news-alert {
+  background-color: $accent-red;
+}
+
+.news-alert__link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.news-alert__wrapper {
+  @include mobile-wrapper;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .news-alert__wrapper {
+    @include tablet-wrapper;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .news-alert__wrapper {
+    @include desktop-wrapper;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}

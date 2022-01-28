@@ -1,0 +1,139 @@
+.teachers {
+  color: #ffffff;
+
+  background-color: $accent-yellow;
+}
+
+.teachers__wrapper {
+  @include mobile-wrapper;
+}
+
+.teachers__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+}
+
+.teachers__item {
+  position: relative;
+
+  margin-bottom: 70px;
+
+  &:nth-child(2n)::before,
+  &:nth-child(2n)::after{
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background-color: #efac2d;
+  }
+
+  &:nth-child(2n)::before {
+    top: -35px;
+  }
+
+  &:nth-child(2n)::after {
+    bottom: -35px;
+  }
+}
+
+.teachers__photo {
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+  border: 8px solid $accent-red;
+}
+
+.teachers__name {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.teachers__degree {
+  margin-bottom: 22px;
+
+  font-weight: 400;
+}
+
+.teachers__telephone {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+
+  & a {
+    color: #ffffff;
+
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .teachers__wrapper {
+    @include tablet-wrapper;
+  }
+
+  .teachers__item{
+    padding-left: 149px;
+    padding-right: 149px;
+
+    &:nth-child(2n)::before,
+    &:nth-child(2n)::after {
+      left: 149px;
+      right: 149px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .teachers__wrapper {
+    @include desktop-wrapper;
+  }
+
+  .teachers__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+
+  }
+
+  .teachers__item {
+    width: (1135px / 3 - 20px * 2);
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    &:nth-child(2n)::before,
+    &:nth-child(2n)::after{
+      top: 0;
+      bottom: 0;
+
+      width: 2px;
+      height: auto;
+
+      background-color: #efac2d;
+    }
+
+    &:nth-child(2n)::before {
+      left: -1px;
+    }
+
+    &:nth-child(2n)::after {
+      left: auto;
+      right: -1px;
+    }
+  }
+}

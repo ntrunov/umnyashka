@@ -1,0 +1,104 @@
+.button {
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+
+  border: 0;
+  border-radius: 5px;
+
+  transition: all 175ms linear;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--transparent {
+    position: relative;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 23px;
+    padding-left: 23px;
+
+    background-color: transparent;
+    border: 2px solid #ffffff;
+
+    &:hover,
+    &:focus {
+      background-color: #ffffff;
+    }
+  }
+
+  &--yellow {
+    background-color: $accent-yellow;
+    border-bottom: 3px solid $accent-yellow-darker;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-yellow-darker;
+      border-bottom-color: $accent-yellow-darkest;
+    }
+
+    &:active {
+      background-color: $accent-yellow-darkest;
+      transition: none;
+    }
+  }
+
+  &--green {
+    background-color: $accent-green;
+    border-bottom: 3px solid $accent-green-darker;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-green-darker;
+      border-bottom-color: $accent-green-darkest;
+    }
+
+    &:active {
+      background-color: $accent-green-darkest;
+    }
+  }
+
+  &--red {
+    background-color: $accent-red;
+    border-bottom: 3px solid $accent-red-darker;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-red-darker;
+      border-bottom-color: $accent-red-darkest;
+    }
+
+    &:active {
+      background-color: $accent-red-darkest;
+    }
+  }
+
+  &--blue {
+    background-color: $accent-blue;
+    border-bottom: 3px solid $accent-blue-darker;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-blue-darker;
+      border-bottom-color: $accent-blue-darkest;
+    }
+
+    &:active {
+      background-color: $accent-blue-darkest;
+    }
+  }
+}
